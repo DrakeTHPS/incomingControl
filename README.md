@@ -16,8 +16,11 @@
 
 ## Использование приложения
 Для использования приложения в MS Visual Studio с помощью NuGet дополнительно установлены следующие пакеты:
+
 System.Data.SQLite.Core
+
 MySql.Data
+
 Microsoft.Office.Interop.Excel
 
 ## Описание алгоритмов работы функций
