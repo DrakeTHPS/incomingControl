@@ -1,0 +1,10 @@
+drop table if exists cinemas;
+drop table if exists halls;
+drop table if exists hall_types;
+drop table if exists movies;
+drop table if exists sessions;
+create table cinemas ( id int auto_increment primary key, city text , cinema_address text) default character set utf8 collate utf8_unicode_ci;
+create table halls ( id int auto_increment primary key, cinema_id int, hall_number int, hall_type_id int);
+create table hall_types ( id int auto_increment primary key, type text, format text, cost int) default character set utf8 collate utf8_unicode_ci;
+create table movies ( id int auto_increment primary key, name text, genre text, duration int, age_limit int) default character set utf8 collate utf8_unicode_ci;
+create table sessions (  hall_id int, datetime timestamp, movie_id int, available tinyint(1) default 1,  PRIMARY KEY (hall_id, datetime));
